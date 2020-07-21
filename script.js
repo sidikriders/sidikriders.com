@@ -115,6 +115,11 @@ function initSideTab() {
   })
 }
 
+function initLazy () {
+  $('img[data-src]').Lazy()
+}
+
 animateTitle()
 animateSkill()
 initSideTab()
+initLazy()

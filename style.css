@@ -371,6 +371,10 @@ a {
   color: #06b0ec;
 }
 
+#education > * > .exp a .subtitle:hover {
+  color: #267e9c;
+}
+
 #education > * > .exp .desc {
   margin-top: 10px;
 }

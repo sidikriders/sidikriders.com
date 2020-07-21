@@ -400,7 +400,6 @@ footer {
   padding-left: 300px;
   text-align: center;
   background: #ccc;
-  margin-top: 30px;
 }
 
 #mobile-burger {
@@ -418,6 +417,79 @@ footer {
   align-items: center;
   z-index: 3;
 }
+
+#portofolio {
+  padding: 0 15px;
+  background-color: #065ea7;
+  margin: 30px 0 0;
+}
+
+#portofolio .content {
+  max-width: 1110px;
+  padding: 30px 0;
+  margin: auto;
+}
+
+#portofolio .content h2 {
+  margin: 0 0 5px;
+  color: #FFF;
+}
+
+#portofolio .project {
+  margin: 30px 0;
+}
+
+#portofolio .project .title {
+  margin: 0 0 5px;
+  display: flex;
+  align-items: center;
+}
+
+#portofolio .project .title h3 {
+  color: #fff;
+  margin: 0;
+}
+
+#portofolio .project .arrow {
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  margin-right: 10px;
+  clip-path: polygon(0 0, 100% 50%, 0 100%, 25% 50%);
+}
+
+#portofolio .project > p {
+  color: #fff;
+}
+
+#portofolio .content p.subtitle {
+  color: #fff;
+  font-style: italic;
+}
+
+#portofolio .project .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% + 15px);
+}
+
+.project .gallery .img {
+  margin: 15px 15px 15px 0;
+  max-width: 266px;
+}
+
+.project .gallery .img img {
+  width: 266px;
+}
+
+.project .gallery .img p {
+  color: #fff;
+  border-left: solid 2px #fff;
+  padding-left: 10px;
+  margin: 10px 0 0;
+  font-weight: 600;
+}
+
 
 @media only screen and (max-width: 1060px) and (min-width: 740px) {
   #education > *:not(h2) {

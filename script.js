@@ -1,12 +1,11 @@
 function animateTitle() {
   var words = [
-    'Sidik Hidayatullah',
+    'Sidik Hidayatullah.',
     'Sidikriders.',
     'Web Developer.',
     'Catlover',
     'Kpop Listener.',
-    'Gamer.',
-    'Single and Available.'
+    'Gamer.'
   ]
 
   var wordOrders = words.reduce((collection, word) => {

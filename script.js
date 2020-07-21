@@ -77,7 +77,8 @@ function initSideTab() {
   var target = [
     $('#main-banner').offset().top,
     $('#about').offset().top + 40,
-    $('#education').offset().top + 40
+    $('#education').offset().top + 40,
+    $('#portofolio').offset().top + 40
   ]
   var treshold = target.map(int => {
     return int + Math.floor(window.innerHeight / 2)
@@ -85,11 +86,16 @@ function initSideTab() {
 
   $(window).scroll(function (e) {
     var scroll = $(this).scrollTop()
-    var index = treshold.length - treshold.filter(tresh => tresh >= scroll).length
-    if (index !== (window.sideMenu || 0)) {
+
+    var _idx = treshold.findIndex((tresh, idx, arr) => {
+      return tresh >= scroll
+    })
+    if (_idx < 0) _idx = treshold.length - 1
+
+    if (_idx !== (window.sideMenu || 0)) {
       $('#side-menu .list-menu .list.active').removeClass('active')
-      $('#side-menu .list-menu a:nth-child(' + (index + 1) + ') .list').addClass('active')
-      window.sideMenu = index
+      $('#side-menu .list-menu a:nth-child(' + (_idx + 1) + ') .list').addClass('active')
+      window.sideMenu = _idx
     }
   })
 
@@ -99,7 +105,6 @@ function initSideTab() {
     $('html, body').animate({
       scrollTop: target[el.index()]
     }, 300)
-    console.log(window.innerWidth <= 740)
     if (window.innerWidth <= 740) {
       $('#side-menu').css('left', '-100vw')
     }
